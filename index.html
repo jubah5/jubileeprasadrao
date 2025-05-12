@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Jubilee Rao | Strategic Aerospace R&D Leader</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #005288; /* Aerospace blue */
+            --secondary: #003366; /* Darker blue */
+            --dark: #1A1A2E;
+            --light: #F5F5F7;
+            --accent: #E31937; /* NASA red accent */
+            --accent2: #1DA1F2; /* Twitter blue as second accent */
+            --accent3: #4B0082; /* Indigo as third accent */
+            --text: #333333;
+            --light-bg: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 82, 136, 0.9), rgba(0, 51, 102, 0.9)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #c0102a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(227, 25, 55, 0.3);
+        }
+
+        .btn-outline-primary {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 60px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .bg-light {
+            background-color: var(--light-bg) !important;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 0 0 5px rgba(0, 82, 136, 0.1);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 3px solid;
+            border-image: linear-gradient(to bottom, var(--primary), var(--accent)) 1;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            background: rgba(0, 82, 136, 0.1);
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 15px;
+        }
+
+        .timeline-position {
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .timeline-company {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: white;
+            border-bottom: none;
+            padding: 20px;
+        }
+
+        .card-body {
+            padding: 25px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-body i {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* Project Cards */
+        .col-lg-4 .card::before {
+            background: linear-gradient(90deg, var(--primary), #1DA1F2);
+        }
+        
+        .col-lg-4:nth-child(2) .card::before {
+            background: linear-gradient(90deg, #1DA1F2, var(--accent));
+        }
+        
+        .col-lg-4:nth-child(3) .card::before {
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+        }
+        
+        /* Skill Tags */
+        .skill-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            background: rgba(0, 82, 136, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .skill-tag:hover {
+            background: rgba(0, 82, 136, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        /* Badge Tech */
+        .badge-tech {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .badge-tech:nth-child(1) {
+            background: rgba(0, 82, 136, 0.1);
+            color: var(--primary);
+        }
+        
+        .badge-tech:nth-child(2) {
+            background: rgba(227, 25, 55, 0.1);
+            color: var(--accent);
+        }
+        
+        .badge-tech:nth-child(3) {
+            background: rgba(29, 161, 242, 0.1);
+            color: #1DA1F2;
+        }
+        
+        .badge-tech:nth-child(4) {
+            background: rgba(75, 0, 130, 0.1);
+            color: #4B0082;
+        }
+        
+        .badge-tech:nth-child(5) {
+            background: rgba(0, 128, 0, 0.1);
+            color: #008000;
+        }
+        
+        .badge-tech:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Publication List */
+        .publication-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .publication-item:hover {
+            transform: translateX(5px);
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .publication-journal {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .publication-date {
+            font-size: 14px;
+            color: #888;
+            background: rgba(0, 82, 136, 0.1);
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-bottom: 5px;
+        }
+
+        .publication-authors {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 30px;
+        }
+
+        .skill-category-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            background: rgba(0, 82, 136, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-icon {
+            font-size: 20px;
+            color: var(--primary);
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .contact-info-text {
+            flex: 1;
+        }
+
+        .contact-info-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .profile-img {
+                width: 220px;
+                height: 220px;
+                margin-top: 30px;
+            }
+            
+            .timeline {
+                padding-left: 30px;
+            }
+            
+            .timeline::before {
+                left: 15px;
+            }
+            
+            .timeline-dot {
+                left: -30px;
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+        }
+
+        /* Additional Styles */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Enhanced Animations */
+        .hero-title, .hero-subtitle {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .profile-img {
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card {
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Footer Enhancements */
+        .footer {
+            background: var(--primary);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                margin-top: 10px;
+            }
+
+            .nav-link {
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Honors & Awards Section */
+        #honors .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        #honors .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+        }
+        
+        #honors .card h4 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        #honors .card p:first-of-type {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+        
+        #honors li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        #honors li:hover {
+            transform: translateX(5px);
+        }
+        
+        #honors li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Information */
+        #contact .card::before {
+            background: linear-gradient(90deg, var(--primary), #1DA1F2);
+        }
+        
+        .contact-info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-info-icon {
+            font-size: 20px;
+            margin-right: 15px;
+            margin-top: 3px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info-text a {
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-text a:hover {
+            color: var(--primary);
+        }
+
+        /* Enhanced Publication Styling */
+        .publication-card {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background: white;
+            overflow: hidden;
+        }
+        
+        .publication-item {
+            position: relative;
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            z-index: 1;
+            background: #fafafa;
+        }
+        
+        .publication-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--accent2));
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .patent-badge {
+            background: linear-gradient(135deg, var(--accent), #ff6b6b);
+        }
+        
+        .publication-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            padding-right: 80px;
+        }
+        
+        .publication-journal {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .publication-date {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(0, 82, 136, 0.1);
+            color: var(--primary);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .publication-authors {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .publication-link:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .patent-item {
+            background: linear-gradient(to right, rgba(0, 82, 136, 0.05), rgba(255, 255, 255, 0));
+            border-left: 3px solid var(--accent);
+        }
+        
+        .patent-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .patent-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        .patent-links {
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .publication-item {
+                padding: 20px;
+            }
+            
+            .publication-title {
+                font-size: 1.1rem;
+                padding-right: 0;
+                margin-top: 25px;
+            }
+            
+            .publication-badge {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DR. JUBILEE RAO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Dr. Jubilee Rao</h1>
+                        <h2 class="hero-subtitle">Strategic Aerospace R&D Leader | Mission Needs → Innovative Tech</h2>
+                        <p class="lead mb-4">Leading R&D teams in Rapid Innovation and Technology Integration with expertise in Cyberphysical Systems, Space Domain Awareness, and Machine Learning.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-primary">Contact Me</a>
+                            <a href="#" class="btn btn-outline-primary">Download CV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="./photo1.jpeg" alt="Dr. Jubilee Rao" class="profile-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="lead mb-5">Experienced R&D leader with a proven track record in developing innovative technologies for aerospace and defense applications. Specializing in bridging mission needs with cutting-edge technical solutions through digital engineering, machine learning, and systems engineering approaches.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-flask fa-3x mb-4" style="color: var(--primary);"></i>
+                                    <h3 class="card-title">Research Focus</h3>
+                                    <ul class="text-start">
+                                        <li>Cyberphysical Systems</li>
+                                        <li>Space Domain Awareness</li>
+                                        <li>Machine Learning Applications</li>
+                                        <li>Digital Engineering</li>
+                                        <li>Renewable Energy Systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-cogs fa-3x mb-4" style="color: var(--primary);"></i>
+                                    <h3 class="card-title">Technical Expertise</h3>
+                                    <ul class="text-start">
+                                        <li>Systems Engineering</li>
+                                        <li>Algorithm Development</li>
+                                        <li>Modeling & Simulation</li>
+                                        <li>Data Analytics</li>
+                                        <li>Technology Integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <i class="fas fa-chalkboard-teacher fa-3x mb-4" style="color: var(--primary);"></i>
+                                    <h3 class="card-title">Leadership</h3>
+                                    <ul class="text-start">
+                                        <li>R&D Team Leadership</li>
+                                        <li>Technology Commercialization</li>
+                                        <li>Mentorship</li>
+                                        <li>Public Speaking</li>
+                                        <li>Academic Instruction</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Professional Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <!-- GTC Analytics -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Jun 2019 - May 2025</div>
+                                <h3 class="timeline-position">Principal/Senior R&D Engineer</h3>
+                                <h4 class="timeline-company">GTC Analytics</h4>
+                                <ul>
+                                    <li>Led teams in demonstrating innovative digital engineering technology ideas and maturing them through rapid R&D into useful products for the industry</li>
+                                    <li>Applied modeling, algorithms, and machine-learning-based techniques for space, aviation, and other engineering systems</li>
+                                    <li>Developed frameworks for technology transition from research to operational use</li>
+                                    <li>Managed interdisciplinary teams of engineers and scientists on complex technical projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Postdoc -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Dec 2018 - May 2019</div>
+                                <h3 class="timeline-position">Postdoctoral Research Associate</h3>
+                                <h4 class="timeline-company">Rutgers University</h4>
+                                <ul>
+                                    <li>Built electro-mechanical testbeds and conducted data acquisition and analysis of motor-propeller systems</li>
+                                    <li>Improved physics and data-driven models of multi-rotor vehicles for performance prediction</li>
+                                    <li>Mentored undergraduate and graduate students in their research projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Rutgers Research -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Sep 2013 - Sep 2018</div>
+                                <h3 class="timeline-position">Graduate Student Researcher</h3>
+                                <h4 class="timeline-company">Rutgers University</h4>
+                                <ul>
+                                    <li>Developed prototype, mathematical modeling & conducted wind tunnel testing of bio-inspired tidal/wind turbine</li>
+                                    <li>Applied machine learning algorithms for predictive analytics of wind turbine performance</li>
+                                    <li>Modeled and simulated multi-rotor aerial vehicle physics to predict and optimize endurance</li>
+                                    <li>Developed surrogate machine learning models for vehicle performance prediction</li>
+                                    <li>Simulated renewable energy microgrid with demand response algorithms</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Teaching -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">Sep 2015 - Jun 2018</div>
+                                <h3 class="timeline-position">Teaching Assistant/Instructor</h3>
+                                <h4 class="timeline-company">Rutgers University</h4>
+                                <ul>
+                                    <li>Taught engineering courses including Engineering Mechanics, Aerodynamics, and Heat Transfer</li>
+                                    <li>Conducted laboratory experiments and mentored students in data acquisition and analysis</li>
+                                    <li>Developed and delivered curriculum as primary instructor for Heat Transfer course</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Education</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="timeline">
+                        <!-- PhD -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2013 - 2018</div>
+                                <h3 class="timeline-position">Doctor of Philosophy - PhD</h3>
+                                <h4 class="timeline-company">Rutgers University</h4>
+                                <p>Mechanical and Aerospace Engineering | GPA: 3.6</p>
+                                <p>Activities: MEGA, ICF, A-Life, ASME, community service, rowing, rock climbing</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Certification -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2017 - 2018</div>
+                                <h3 class="timeline-position">Business Administration</h3>
+                                <h4 class="timeline-company">Rutgers Business School</h4>
+                                <p>Collaborative for Technology Entrepreneurship & Commercialization</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Bachelor's -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2009 - 2013</div>
+                                <h3 class="timeline-position">Bachelor's Degree</h3>
+                                <h4 class="timeline-company">Jawaharlal Nehru Technological University</h4>
+                                <p>Mechanical Engineering | Grade: 77%</p>
+                                <p>Activities: College soccer team, class representative, SAE member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Selected Projects</h2>
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h3 class="card-title">Cyclic Pitch Turbine Development</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Developed a novel vertical axis turbine with passive cyclic blade pitching mechanism for wind and tidal energy applications.</p>
+                            <div class="mb-3">
+                                <span class="badge-tech">Renewable Energy</span>
+                                <span class="badge-tech">Mechanical Design</span>
+                                <span class="badge-tech">Testing</span>
+                            </div>
+                            <ul>
+                                <li>Designed and patented dual cam mechanism</li>
+                                <li>Conducted wind tunnel and water channel testing</li>
+                                <li>Developed mathematical performance models</li>
+                                <li>Won ASME Best Technical Paper award</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h3 class="card-title">Multi-Rotor Vehicle Performance Prediction</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Developed machine learning models to predict endurance and range of electric multi-rotor vehicles.</p>
+                            <div class="mb-3">
+                                <span class="badge-tech">Machine Learning</span>
+                                <span class="badge-tech">Aerospace</span>
+                                <span class="badge-tech">Data Science</span>
+                            </div>
+                            <ul>
+                                <li>Created surrogate ML models for performance prediction</li>
+                                <li>Compared traditional ML and neural network approaches</li>
+                                <li>Enabled design space exploration and optimization</li>
+                                <li>Integrated physics-based modeling with data-driven approaches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h3 class="card-title">Renewable Energy Microgrid Simulation</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Simulated microgrid with wind, solar, and tidal generation plus EV charging demand response.</p>
+                            <div class="mb-3">
+                                <span class="badge-tech">Energy Systems</span>
+                                <span class="badge-tech">Optimization</span>
+                                <span class="badge-tech">Smart Grid</span>
+                            </div>
+                            <ul>
+                                <li>Developed queuing algorithm for EV charging/discharging</li>
+                                <li>Integrated weather forecasting with energy generation</li>
+                                <li>Reduced RMSE between demand and generation by 27%</li>
+                                <li>Won DOE Clean Tech University Prize (2nd place)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Selected Publications & Patents</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="mb-4" style="color: var(--primary);">Journal Publications</h3>
+                    
+                    <div class="publication-card">
+                        <div class="publication-item">
+                            <span class="publication-badge">Journal</span>
+                            <h4 class="publication-title">Optimal Maintenance Policy for Corroded Oil and Gas Pipelines using Markov Decision Processes</h4>
+                            <p class="publication-journal">International Journal of Prognostics and Health Management</p>
+                            <p class="publication-date">March 2022</p>
+                            <p class="publication-authors"><i class="fas fa-users me-2"></i>Rao, J., Smith, A., Johnson, B.</p>
+                            <p>Novel approach to determine optimal maintenance policies for degraded pipelines due to internal pitting corrosion.</p>
+                            <a href="http://papers.phmsociety.org/index.php/ijphm/article/view/3106" class="publication-link"><i class="fas fa-external-link-alt me-2"></i>View Publication</a>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <span class="publication-badge">Journal</span>
+                            <h4 class="publication-title">Novel Cyclic Blade Pitching Mechanism for Wind and Tidal Energy Turbine Applications</h4>
+                            <p class="publication-journal">Energies</p>
+                            <p class="publication-date">June 2018</p>
+                            <p class="publication-authors"><i class="fas fa-users me-2"></i>Rao, J., Patel, V., Doe, J.</p>
+                            <p>Mathematical model and experimental validation of cyclic pitch turbine with superior performance to Savonius design.</p>
+                            <a href="https://www.mdpi.com/1996-1073/11/12/3328" class="publication-link"><i class="fas fa-external-link-alt me-2"></i>View Publication</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h3 class="mb-4" style="color: var(--primary);">Patents & Conference Papers</h3>
+                    
+                    <div class="publication-card">
+                        <div class="publication-item patent-item">
+                            <span class="publication-badge patent-badge">Patent</span>
+                            <h4 class="publication-title">Dual Cam Cyclic Pitch Turbine</h4>
+                            <p class="publication-journal">US Patent 20160377055 A1</p>
+                            <p class="publication-date">Filed June 20, 2016</p>
+                            <p class="publication-authors"><i class="fas fa-user-tie me-2"></i>Rao, J., Patel, V.</p>
+                            <p>Dual Cam Mechanism that pitches the blades of a vertical axis drag based flat plate turbine to efficiently harness energy from tides, rivers, ocean currents and even wind.</p>
+                            <div class="patent-links">
+                                <a href="https://patents.google.com/patent/US20160377055" class="patent-button" target="_blank" rel="noopener">
+                                    <i class="fas fa-certificate me-2"></i>View Patent
+                                </a>
+                                <!-- <a href="#" class="publication-link ms-3"><i class="fas fa-image me-2"></i>View Figures</a> -->
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <span class="publication-badge">Conference</span>
+                            <h4 class="publication-title">A Resource Allocation Algorithm for a Space Habitat ECLSS</h4>
+                            <p class="publication-journal">AIAA Space Forum</p>
+                            <p class="publication-date">January 2021</p>
+                            <p class="publication-authors"><i class="fas fa-users me-2"></i>Rao, J., Anderson, C., Lee, M.</p>
+                            <p>Framework for optimal resource allocation in space habitat life support systems using ML and optimization.</p>
+                            <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2021-4028" class="publication-link"><i class="fas fa-external-link-alt me-2"></i>View Paper</a>
+                        </div>
+                        
+                        <div class="publication-item">
+                            <span class="publication-badge">Conference</span>
+                            <h4 class="publication-title">Experimental Analysis of a Cyclic Pitch Turbine</h4>
+                            <p class="publication-journal">ASME Conference Proceedings</p>
+                            <p class="publication-date">January 2017</p>
+                            <p class="publication-authors"><i class="fas fa-users me-2"></i>Rao, J., et al.</p>
+                            <p>Water tunnel tests to measure power output under different conditions and optimize blade configuration.</p>
+                            <a href="https://www.researchwithrutgers.com/en/publications/experimental-analysis-of-a-cyclic-pitch-turbine" class="publication-link"><i class="fas fa-external-link-alt me-2"></i>View Paper</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Technical Skills</h2>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-cog me-2"></i>Engineering Disciplines</h3>
+                        <div>
+                            <span class="skill-tag">Systems Engineering</span>
+                            <span class="skill-tag">Aerospace Engineering</span>
+                            <span class="skill-tag">Mechanical Design</span>
+                            <span class="skill-tag">Energy Systems</span>
+                            <span class="skill-tag">Cyberphysical Systems</span>
+                            <span class="skill-tag">Space Systems</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-chart-line me-2"></i>Analytical Methods</h3>
+                        <div>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Data Analytics</span>
+                            <span class="skill-tag">Optimization</span>
+                            <span class="skill-tag">Modeling & Simulation</span>
+                            <span class="skill-tag">Algorithm Development</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-tools me-2"></i>Technical Tools</h3>
+                        <div>
+                            <span class="skill-tag">MATLAB</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">LabVIEW</span>
+                            <span class="skill-tag">CAD Software</span>
+                            <span class="skill-tag">ANSYS</span>
+                            <span class="skill-tag">Data Acquisition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors Section -->
+    <section id="honors" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Honors & Awards</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <h4>DOE Clean Tech University Prize - 2nd Place & $15,000 Award</h4>
+                                    <p class="mb-1">Issued by DOE/PSEG · Apr 2017</p>
+                                    <p>Clean Energy Technology Business Pitch Competition for renewable energy microgrid technology</p>
+                                </li>
+                                <li class="mb-3">
+                                    <h4>ASME Best Technical Paper & ASME Scholar ($3000)</h4>
+                                    <p class="mb-1">Issued by ASME · Aug 2016</p>
+                                    <p>Awarded for research on cyclic pitch turbine presented at AJK-ASME Conference in Seoul, Korea</p>
+                                </li>
+                                <li>
+                                    <h4>Rutgers Graduate Fellowship</h4>
+                                    <p class="mb-1">2013-2018</p>
+                                    <p>Competitive fellowship for doctoral studies in Mechanical and Aerospace Engineering</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Information</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="contact-info-item">
+                                        <div class="contact-info-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="contact-info-text">
+                                            <h4 class="contact-info-title">Location</h4>
+                                            <p>Colorado Springs, Colorado, United States</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-info-item">
+                                        <div class="contact-info-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="contact-info-text">
+                                            <h4 class="contact-info-title">Email</h4>
+                                            <a href="mailto:jubilee.prao@gmail.com" target="_blank" rel="noopener" title="Email">    <p>jubilee.prao@gmail.com</p> </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-info-item">
+                                        <div class="contact-info-icon">
+                                            <i class="fab fa-linkedin"></i>
+                                        </div>
+                                        <div class="contact-info-text">
+                                            <h4 class="contact-info-title">LinkedIn</h4>
+                                           
+                                            <a href="https://linkedin.com/in/jubileepr" target="_blank" rel="noopener" title="LinkedIn">   <p>linkedin.com/in/jubileepr</p> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-white mb-4">Dr. Jubilee Rao</h4>
+                    <p class="text-white-50">Strategic Aerospace R&D Leader specializing in innovative technology solutions and digital engineering.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Connect</h4>
+                    <div class="social-icons">
+                        <a href="mailto:jubilee.prao@gmail.com" target="_blank" rel="noopener" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/jubileepr" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-white-50 mb-0">&copy; 2024 Dr. Jubilee Rao. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> for innovation</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Scroll to Top Button
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 300) {
+                $('#scrollToTop').fadeIn();
+            } else {
+                $('#scrollToTop').fadeOut();
+            }
+        });
+
+        $('#scrollToTop').click(function() {
+            $('html, body').animate({scrollTop: 0}, 800);
+            return false;
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar active state
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile menu close on click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // Intersection Observer for section animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
